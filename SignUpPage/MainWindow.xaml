@@ -36,9 +36,9 @@
         <PasswordBox x:Name="pswdBox" Grid.Row="5" Width="250" Height="20" BorderBrush="Olive" BorderThickness="1.5" />
 
 
-        <Button Grid.Row="6" Width="60" Height="20" Content="Sign Up" Foreground="Olive" FontWeight="Bold" Click="Button_Click" />
+        <Button Grid.Row="6" Width="60" Height="20" Content="Sign Up" Foreground="Olive" FontWeight="Bold" Click="Button_Click" Margin="208,21,232,21" />
 
-        <Button Grid.Row="6" Width="70" Height="20" Content="Insert" Foreground="Olive" FontWeight="Bold" Margin="10,21,400,21" Click="Insert"  />
+        <Button Grid.Row="6" Width="60" Height="20" Content="Insert" Foreground="Olive" FontWeight="Bold"  Margin="101,21,339,21" Click="Insert_" />
 
 
 

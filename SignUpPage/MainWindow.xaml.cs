@@ -27,7 +27,9 @@ namespace SignUpPage
         }
 
         string sqlCon = @"Data Source=LAB108PC23\SQLEXPRESS; Initial Catalog=SignUp; Integrated Security=True;";
-       
+
+        //string sqlCon = "SERVER NAME/DATABASE NAME/Protected or not"
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -45,9 +47,9 @@ namespace SignUpPage
 
             //    MessageBox.Show("You have not entered a valid email address");
             //}
-            
-            
-            
+
+
+
             //else
             //{
             //    MessageBox.Show($"Your username is :{txtUsername.Text}, and your password is:{pswdBox.Password}");
@@ -66,31 +68,37 @@ namespace SignUpPage
             txtFName.Text = "";
         }
 
-        private void Insert(object sender, RoutedEventArgs e)
+        private void Insert_(object sender, RoutedEventArgs e)
         {
+            //establish the connection
+
             SqlConnection conn = new SqlConnection(sqlCon);
+
             try
             {
-                //open the connection to the database
+                //open the conneciton to the db 
                 conn.Open();
-                //establish the query for the button to work with
-                string query = $"Insert into CredentialsTable(Username, Email,Password,FirstName,LastName)values ('{txtUsername.Text}','{txtFName.Text}','{txtLname.Text}','{txtEmail.Text}','{pswdBox.Password}')";
 
-                //make the command functional 
-                SqlCommand sqlCommand = new SqlCommand(query, conn);
-                sqlCommand.ExecuteNonQuery();
+                //create the query 
 
-                MessageBox.Show("You have successfully inserted data");
-                conn.Close();
+                string query = $"Insert into Credentials_table(Username,FirstName,LastName,Email,Password) values ('{txtUsername.Text}','{txtFName.Text}','{txtLname.Text}','{txtEmail.Text}','{pswdBox.Password}')";
+                //establish the conn between the query and the db
 
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
 
+                MessageBox.Show("Success it works fine!");
 
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+              MessageBox.Show(ex.Message);
             }
+            
+
+
+
 
         }
     }
