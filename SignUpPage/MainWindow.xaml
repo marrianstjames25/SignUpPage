@@ -1,0 +1,46 @@
+﻿<Window x:Class="SignUpPage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SignUpPage"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="500">
+    <Grid Background="#FFC4D994">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+           
+        </Grid.RowDefinitions>
+        
+        
+        <!-- Create a label-->
+        <Label Foreground="white" Content="Sign Up" Grid.Row="0"
+               FontSize="25" HorizontalContentAlignment="Center"
+               FontFamily="Verdana" VerticalContentAlignment="Center" Background="DarkOliveGreen"/>
+        
+        <!-- Text box creation -->
+        <TextBox x:Name="txtUsername" Grid.Row="1" Width="250" Height="20" Text="Username" BorderBrush="Olive" BorderThickness="1.5" GotFocus="usernameClear"/>
+
+        <TextBox x:Name="txtFName" Grid.Row="2" Width="250" Height="20" Text="First Name" BorderBrush="Olive" BorderThickness="1.5" GotFocus="clearFirstName"/>
+
+        <TextBox x:Name="txtLname" Grid.Row="3" Width="250" Height="20" Text="Last Name" BorderBrush="Olive" BorderThickness="1.5"/>
+
+        <TextBox x:Name="txtEmail" Grid.Row="4" Width="250" Height="20" Text="Email" BorderBrush="Olive" BorderThickness="1.5"/>
+
+        <PasswordBox x:Name="pswdBox" Grid.Row="5" Width="250" Height="20" BorderBrush="Olive" BorderThickness="1.5" />
+
+
+        <Button Grid.Row="6" Width="60" Height="20" Content="Sign Up" Foreground="Olive" FontWeight="Bold" Click="Button_Click" />
+
+        <Button Grid.Row="6" Width="70" Height="20" Content="Insert" Foreground="Olive" FontWeight="Bold" Margin="10,21,400,21" Click="Insert"  />
+
+
+
+    </Grid>
+</Window>
